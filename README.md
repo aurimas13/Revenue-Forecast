@@ -1,3 +1,9 @@
+<p align=center>
+  <img height="300px" src="https://github.com/aurimas13/Revenue-Forecast/blob/main/public/images/revenue.jpg"/>
+</p>
+
+<p align="center" > <b> Monthly Revenue Forecast </b> </p>
+
 ![GitHub last commit](https://img.shields.io/github/last-commit/aurimas13/Revenue-Forecast)
 ![GitHub issues](https://img.shields.io/github/issues/aurimas13/Revenue-Forecast)
 ![GitHub stars](https://img.shields.io/github/stars/aurimas13/Revenue-Forecast)
