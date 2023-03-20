@@ -1,5 +1,5 @@
 <p align=center>
-  <img height="200px" src="https://github.com/aurimas13/Revenue-Forecast/blob/main/public/images/revenue.jpg"/>
+  <img height="300px" src="https://github.com/aurimas13/Revenue-Forecast/blob/main/public/images/revenue.jpg"/>
 </p>
 
 <p align="center" > <b> Monthly Revenue Forecast </b> </p>
