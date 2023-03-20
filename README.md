@@ -40,7 +40,9 @@ These models are used to forecast future monthly revenue based on historical dat
 To set up a virtual environment and install the required packages, follow these steps:
 
 1. Clone the repository:
-```git clone https://github.com/aurimas13/Revenue-Forecast.git```
+```
+git clone https://github.com/aurimas13/Revenue-Forecast.git
+```
 2. Create a virtual environment:
 3. Activate the virtual environment:
 4. Install the required packages:
