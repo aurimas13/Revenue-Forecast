@@ -44,12 +44,37 @@ To set up a virtual environment and install the required packages, follow these 
 git clone https://github.com/aurimas13/Revenue-Forecast.git
 ```
 2. Create a virtual environment:
+```
+python3 -m venv venv
+```
 3. Activate the virtual environment:
+```
+source venv/bin/activate
+```
 4. Install the required packages:
+```
+pip install -r requirements.txt
+```
 
+# Usage
+
+1. Add your historical revenue data to a CSV file with columns Date and Revenue.
+2. Update the file path in the code to point to your CSV file.
+3. Run the main script:
+```
+python main.py
+```
+4. The script will preprocess the data, train the ARIMA, LSTM, and Prophet models, and evaluate their performance.
+5. The results will be displayed, including visualizations of the model predictions and a comparison of their performance metrics.
+
+# Results
+
+The repository includes a comparison of the ARIMA, LSTM, and Prophet models' performance in terms of MSE, MAE, MAPE, and RMSE. The comparison will help you decide which model is best suited for your revenue forecasting needs.
+
+# Contributing
+
+Contributions are welcome! Please submit a pull request or create an issue to discuss any changes or improvements you would like to make.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/aurimas13/Revenue-Forecast/blob/main/LICENSE) file for details.
-
-For the LICENSE file, y
