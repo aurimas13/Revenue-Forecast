@@ -1,5 +1,5 @@
 <p align=center>
-  <img height="300px" src="https://github.com/aurimas13/Revenue-Forecast/blob/main/public/images/revenue.jpg"/>
+  <img height="400px" src="https://github.com/aurimas13/Revenue-Forecast/blob/main/public/images/revenue.jpg"/>
 </p>
 
 <p align="center" > <b> Monthly Revenue Forecast </b> </p>
@@ -10,10 +10,6 @@
 <a href="https://img.shields.io/github/forks/aurimas13/Revenue-Forecast"><img alt="twitter" src="https://img.shields.io/github/forks/aurimas13/Revenue-Forecast?style=social"/></a
   <a href="https://twitter.com/anausedas"><img alt="twitter" src="https://img.shields.io/twitter/follow/anausedas?style=social"/></a>
 </p>
-![GitHub last commit](https://img.shields.io/github/last-commit/aurimas13/Revenue-Forecast)
-![GitHub issues](https://img.shields.io/github/issues/aurimas13/Revenue-Forecast)
-![GitHub stars](https://img.shields.io/github/stars/aurimas13/Revenue-Forecast)
-![GitHub forks](https://img.shields.io/github/forks/aurimas13/Revenue-Forecast)
 
 # Overview
 
