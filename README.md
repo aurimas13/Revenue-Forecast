@@ -4,7 +4,7 @@
 
 <p align="center" > <b> Monthly Revenue Forecast </b> </p>
 <p align=center>
-<a href="https://img.shields.io/github/last-commit/aurimas13/Revenue-Forecast"><img alt="lastcommit" src="https://img.shields.io/github/last-commit/aurimas13/Revenue-Forecast"/></a
+<a href="https://img.shields.io/github/last-commit/aurimas13/Revenue-Forecast"><img alt="lastcommit" src="https://img.shields.io/github/last-commit/aurimas13/Revenue-Forecast?style=social"/></a
 <a href="https://img.shields.io/github/issues/aurimas13/Revenue-Forecast"><img alt="issues" src="https://img.shields.io/github/issues/aurimas13/Revenue-Forecast"/></a
 <a href="https://twitter.com/anausedas"><img alt="twitter" src="https://img.shields.io/twitter/follow/anausedas?style=social"/></a
 <a href="https://twitter.com/anausedas"><img alt="twitter" src="https://img.shields.io/twitter/follow/anausedas?style=social"/></a
