@@ -2,7 +2,7 @@
   <img height="300px" src="https://github.com/aurimas13/Revenue-Forecast/blob/main/public/images/revenue.jpg"/>
 </p>
 
-<p align="center" > <b> Monthly Revenue Forecast </b> </p>
+<p align="center" > <b> Revenue Forecast </b> </p>
 <p align=center>
 <a href="https://img.shields.io/github/last-commit/aurimas13/Revenue-Forecast"><img alt="lastcommit" src="https://img.shields.io/github/last-commit/aurimas13/Revenue-Forecast?style=social"/></a
 <a href="https://img.shields.io/github/issues/aurimas13/Revenue-Forecast"><img alt="issues" src="https://img.shields.io/github/issues/aurimas13/Revenue-Forecast?style=social"/></a
