@@ -81,11 +81,11 @@ pip install -r requirements.txt
 
 # Usage
 
-1. TO BE DONE - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOKS: 
+1. TO BE DONE IF ASKED - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOKS: 
   Add your historical revenue and weather or just revenue data to a CSV file with columns Date and Revenue for Daily or Monthly Forecast.
-2. TO BE DONE - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOKS: 
+2. TO BE DONE IF ASKED - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOKS: 
   Update the file path in the code to point to your CSV file.
-3. TO BE DONE - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOKS: 
+3. TO BE DONE IF ASKED - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOKS: 
   Run the main script:
 ```
 python main.py
