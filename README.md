@@ -81,9 +81,9 @@ pip install -r requirements.txt
 
 # Usage
 
-1. Add your historical revenue and weather or just revenue data to a CSV file with columns Date and Revenue for Daily or Monthly Forecast.
-2. Update the file path in the code to point to your CSV file.
-3. Run the main script:
+1. TO BE DONE - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOK Add your historical revenue and weather or just revenue data to a CSV file with columns Date and Revenue for Daily or Monthly Forecast.
+2. TO BE DONE - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOK: Update the file path in the code to point to your CSV file.
+3. TO BE DONE - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOK: Run the main script:
 ```
 python main.py
 ```
