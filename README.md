@@ -27,9 +27,9 @@ The Revenue Forecast project aimed to predict daily and monthly revenues using t
 
 5. **Comparing Models**: The performance of all three models was compared visually and quantitatively using metrics such as MSE, MAE, RMSE, and MAPE. The comparison allowed for the identification of the model with the best predictive accuracy.
 
-6. **Tuning Models**: The ARIMA and Prophet models were further tuned to improve their performance. The auto_arima function and manual inspection was used to identify the best parameters for the ARIMA model, while the Prophet model was refined by incorporating additional regressors.
+6. **Tuning Models**: The ARIMA and Prophet models or just ARIMA model were further tuned to improve their performance. The auto_arima function and manual inspection was used to identify the best parameters for the ARIMA model, while the Prophet model was refined by incorporating additional regressors.
 
-7. **Comparing Tuned Models**: The performance of the tuned ARIMA and Prophet models was compared using the same metrics as before. The comparison enabled the identification of the best model for predicting revenue in this specific case.
+7. **Comparing Tuned Models**: The performance of the tuned ARIMA and Prophet models or just ARIMA model was compared using the same metrics as before. The comparison enabled the identification of the best model for predicting revenue in this specific case.
 
 Based on the comparison of accuracy metrics, the ARIMA model was found to be the best choice for this particular dataset and problem, despite its limitations in handling multivariate data. This analysis demonstrated the importance of exploring multiple models and metrics when making predictions and highlights the need for model selection to be tailored to the specific dataset and problem at hand.
 
