@@ -13,13 +13,25 @@
 
 # Overview
 
-This repository contains the implementation of three time series forecasting models for predicting monthly revenue:
+# **Overview** </b>
 
-1. Autoregressive Integrated Moving Average (ARIMA)
-2. Long Short-Term Memory (LSTM)
-3. Facebook Prophet
+The Revenue Forecast project aimed to predict daily and monthly revenues using time series data and weather features by comparing the performance of three different models: Long Short-Term Memory (LSTM), Prophet, and Autoregressive Integrated Moving Average (ARIMA). The main tasks performed in the notebooks were as follows:
 
-These models are used to forecast future monthly revenue based on historical data. The repository includes code to preprocess the data, train the models, and evaluate their performance using various metrics such as Mean Squared Error (MSE), Mean Absolute Error (MAE), Mean Absolute Percentage Error (MAPE), and Root Mean Squared Error (RMSE).
+1. **Data Preparation**: The time series data and weather features were loaded, cleaned, and preprocessed. Missing values were imputed, and the data was divided into training and testing sets.
+
+2. **LSTM Model**: An LSTM model was developed using PyTorch to predict revenue based on the time series data and weather features. The model was trained and evaluated using the test data.
+
+3. **Prophet Model**: The Prophet model from Facebook was utilized, which is designed for multivariate time series forecasting with the ability to incorporate additional regressors. The model was trained on the revenue time series data and weather features, and its performance was evaluated using the test data.
+
+4. **ARIMA Model**: An ARIMA model was implemented for univariate time series forecasting. The model was trained on the revenue time series data, and its performance was evaluated using the test data.
+
+5. **Comparing Models**: The performance of all three models was compared visually and quantitatively using metrics such as MSE, MAE, RMSE, and MAPE. The comparison allowed for the identification of the model with the best predictive accuracy.
+
+6. **Tuning Models**: The ARIMA and Prophet models were further tuned to improve their performance. The auto_arima function and manual inspection was used to identify the best parameters for the ARIMA model, while the Prophet model was refined by incorporating additional regressors.
+
+7. **Comparing Tuned Models**: The performance of the tuned ARIMA and Prophet models was compared using the same metrics as before. The comparison enabled the identification of the best model for predicting revenue in this specific case.
+
+Based on the comparison of accuracy metrics, the ARIMA model was found to be the best choice for this particular dataset and problem, despite its limitations in handling multivariate data. This analysis demonstrated the importance of exploring multiple models and metrics when making predictions and highlights the need for model selection to be tailored to the specific dataset and problem at hand.
 
 # Table of Contents
 
@@ -37,10 +49,14 @@ These models are used to forecast future monthly revenue based on historical dat
 - pandas
 - numpy
 - matplotlib
+- seaborn
 - scikit-learn
 - statsmodels
 - torch
 - fbprophet
+- pmdarima
+- Jupyter Notebook
+ 
 
 # Installation
 
@@ -65,7 +81,7 @@ pip install -r requirements.txt
 
 # Usage
 
-1. Add your historical revenue data to a CSV file with columns Date and Revenue.
+1. Add your historical revenue and weather or just revenue data to a CSV file with columns Date and Revenue for Daily or Monthly Forecast.
 2. Update the file path in the code to point to your CSV file.
 3. Run the main script:
 ```
