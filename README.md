@@ -81,14 +81,16 @@ pip install -r requirements.txt
 
 # Usage
 
-1. TO BE DONE IF ASKED - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOKS: Add your historical revenue and weather or just revenue data to a CSV file with columns Date and Revenue for Daily or Monthly Forecast.
+TO BE DONE NEXT WEEK.
+
+<!-- 1. TO BE DONE IF ASKED - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOKS: Add your historical revenue and weather or just revenue data to a CSV file with columns Date and Revenue for Daily or Monthly Forecast.
 2. TO BE DONE IF ASKED - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOKS: Update the file path in the code to point to your CSV file.
 3. TO BE DONE IF ASKED - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOKS: Run the main script:
 ```
 python main.py
 ```
 4. The script will preprocess the data, train the ARIMA, LSTM, and Prophet models, and evaluate their performance.
-5. The results will be displayed, including visualizations of the model predictions and a comparison of their performance metrics.
+5. The results will be displayed, including visualizations of the model predictions and a comparison of their performance metrics. -->
 
 # Results
 
