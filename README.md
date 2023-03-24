@@ -138,13 +138,13 @@ The project is organized as follows:
 # Docker
 
 To build & run docker do these commands: 
-`docker build -t tracker .` & `docker run --name tracker_docker -p 5000:5000 tracker`
+`docker build -t monthly-revenue-prediction .` & `docker run -p 5000:5000 monthly-revenue-prediction`
 
 To run the app then go and follow what is said at [Installation](#installation).
 
 # Results
 
-The repository includes a comparison of the ARIMA, LSTM, and Prophet models' performance in terms of MSE, MAE, MAPE, and RMSE. The comparison will help you decide which model is best suited for your revenue forecasting needs.
+The repository includes a comparison of the ARIMA, LSTM, and Prophet models' performance in terms of MSE, MAE, MAPE, and RMSE. The comparison in the Jupyter notebooks will help you decide which model is best suited for your revenue forecasting needs. Default chosen is ARIMA model for both Daily and Monthly reevenue forecasts.
 
 # Contributing
 
