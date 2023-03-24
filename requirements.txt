@@ -12,5 +12,3 @@ matplotlib
 jupyter
 flaskprophet
 pmdarima
-
-
