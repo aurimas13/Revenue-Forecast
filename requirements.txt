@@ -12,3 +12,6 @@ matplotlib
 jupyter
 flaskprophet
 pmdarima
+pickle
+
+
