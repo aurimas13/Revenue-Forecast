@@ -36,16 +36,24 @@ Based on the comparison of accuracy metrics, the ARIMA model was found to be the
 # Table of Contents
 
 - [Overview](#overview)
+- [Getting Started](#getting-started)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Project Structure](#project-structure)
 - [Results](#results)
+- [Docker](#docker)
 - [Contributing](#contributing)
 - [License](#license)
 
-# Requirements
+# Getting Started
+
+Follow these instructions to set up the project on your local machine for development and testing purposes.
+## Requirements
 
 - Python 3.7+
+- Git
+- pip
 - pandas
 - numpy
 - matplotlib
@@ -66,23 +74,49 @@ To set up a virtual environment and install the required packages, follow these 
 ```
 git clone https://github.com/aurimas13/Revenue-Forecast.git
 ```
-2. Create a virtual environment:
+2. Change the working directory:
 ```
-python3 -m venv venv
+cd Revenue-Forecast
 ```
-3. Activate the virtual environment:
+3. Create a virtual environment:
+```
+python -m venv venv
+```
+4. Activate the virtual environment:
+  - On Windows:
+```
+venv\Scripts\activate
+```
+  - On macOS and Linux:
 ```
 source venv/bin/activate
 ```
-4. Install the required packages:
+5. Install the required packages:
 ```
 pip install -r requirements.txt
 ```
-
+6. Run the Monthly_Revenue_Forecast.py script to create and save the ARIMA model:
+```
+python Monthly_Revenue_Forecast.py
+```
+7. Start the Flask development server:
+```
+flask run
+```
 # Usage
 
-TO BE DONE NEXT WEEK.
-
+To get the predicted revenue for the next month, send a request to the `/forecast` endpoint:
+```curl -X GET http://localhost:5000/forecast```
+The API will return a JSON object containing the predicted revenue:
+```
+{
+  "prediction": 1234567.89
+}
+```
+You can also send a POST request to the /forecast endpoint with the same result:
+```
+curl -X POST http://localhost:5000/forecast
+```
 <!-- 1. TO BE DONE IF ASKED - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOKS: Add your historical revenue and weather or just revenue data to a CSV file with columns Date and Revenue for Daily or Monthly Forecast.
 2. TO BE DONE IF ASKED - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOKS: Update the file path in the code to point to your CSV file.
 3. TO BE DONE IF ASKED - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOKS: Run the main script:
@@ -91,6 +125,22 @@ python main.py
 ```
 4. The script will preprocess the data, train the ARIMA, LSTM, and Prophet models, and evaluate their performance.
 5. The results will be displayed, including visualizations of the model predictions and a comparison of their performance metrics. -->
+
+# Project Structure
+
+The project is organized as follows:
+
+- `app.py`: The main Flask API file that initializes the ARIMA model and sets up the /forecast endpoint.
+- `Monthly_Revenue_Forecast.py`: This module contains functions for preprocessing the data, making predictions using the ARIMA model, and creating and saving the ARIMA model.
+`arima_results.pkl`: The saved ARIMA model.
+`requirements.txt`: The list of required packages for the project.
+
+# Docker
+
+To build & run docker do these commands: 
+`docker build -t tracker .` & `docker run --name tracker_docker -p 5000:5000 tracker`
+
+To run the app then go and follow what is said at [Installation](#installation).
 
 # Results
 
