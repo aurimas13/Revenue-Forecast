@@ -1,0 +1,16 @@
+pandas
+numpy
+saeaborn
+torch
+random
+warnings
+logging
+scikit-learn
+sklearn
+statsmodels
+matplotlib
+jupyter
+flaskprophet
+pmdarima
+
+
