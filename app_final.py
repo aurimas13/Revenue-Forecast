@@ -30,6 +30,9 @@ def forecast():
 
     if request.method == 'GET':
         
+        # Update cached data with the latest data
+        revenue_data, weather_data = read_remote_data(url)
+
         # Preprocess the data
         preprocessed_data = preprocess_data(revenue_data, weather_data)
 
@@ -38,6 +41,7 @@ def forecast():
 
         # Return the prediction as JSON
         return jsonify({'prediction': prediction})
+    
     elif request.method == 'POST':
         if 'file' not in request.files:
             flash('No file part')

@@ -10,6 +10,12 @@ os.environ['PYTHONWARNINGS'] = 'ignore::RuntimeWarning'
 warnings.filterwarnings("ignore", category=ValueWarning)
 
 
+# Function to read remote data
+def read_remote_data(url):
+    revenue_data = pd.read_excel(url, sheet_name='Revenue', parse_dates=['Date'], engine='openpyxl')
+    weather_data = pd.read_excel(url, sheet_name='Weather', parse_dates=['dt'], engine='openpyxl')
+    return revenue_data, weather_data
+
 # Function to preprocess revenue and weather data
 def preprocess_data(revenue_data, weather_data):
     # Drop the 'time' column from the weather_data
@@ -92,8 +98,8 @@ def create_and_save_arima_model(ts_data, p=2, d=1, q=5):
 if __name__ == "__main__":
     url = "https://github.com/aurimas13/Revenue-Forecast/blob/main/Dataset/Barbora%20Homework.xlsx?raw=true"
 
-    revenue_data = pd.read_excel(url, sheet_name='Revenue', parse_dates=['Date'], engine='openpyxl')
-    weather_data = pd.read_excel(url, sheet_name='Weather', parse_dates=['dt'], engine='openpyxl')
+    # Read the remote data using the read_remote_data function
+    revenue_data, weather_data = read_remote_data(url)
 
     preprocessed_data = preprocess_data(revenue_data, weather_data)
 
