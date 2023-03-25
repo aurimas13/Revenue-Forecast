@@ -125,4 +125,3 @@ if __name__ == "__main__":
     # Load the ARIMA model
     with open('arima_results.pkl', 'rb') as f:
         model = pickle.load(f)
-
