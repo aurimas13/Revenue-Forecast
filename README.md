@@ -61,20 +61,7 @@ To get started, follow the Installation and Usage sections in the documentation.
 Follow these instructions to set up the project on your local machine for development and testing purposes.
 ## Requirements
 
-- Python 3.7+
-- Git
-- pip
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- scikit-learn
-- statsmodels
-- torch
-- fbprophet
-- pmdarima
-- Jupyter Notebook
- 
+To run the porject Python 3.7+ is needswhile libraries required are at [requirments](https://github.com/aurimas13/Revenue-Forecast/blob/main/requirements.txt) file. 
 
 # Installation
 
