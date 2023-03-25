@@ -202,3 +202,4 @@ Contributions are welcome! Please submit a pull request or create an issue to di
 # License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/aurimas13/Revenue-Forecast/blob/main/LICENSE) file for details.
+
