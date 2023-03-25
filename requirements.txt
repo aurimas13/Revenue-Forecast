@@ -1,3 +1,4 @@
+os
 pandas
 numpy
 saeaborn
@@ -10,6 +11,8 @@ sklearn
 statsmodels
 matplotlib
 jupyter
-flaskprophet
+flask
+prophet
 pmdarima
 pickle
+werkzeug.utils
