@@ -2,12 +2,14 @@ pandas
 numpy
 seaborn
 scikit-learn
-sklearn
+scikit-learn==0.24.2
 statsmodels
 matplotlib
 werkzeug
+pathlib
 prophet
 pmdarima
 jupyter
 flask
-torch
+openpyxl
+# torch

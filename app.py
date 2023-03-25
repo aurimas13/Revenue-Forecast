@@ -1,17 +1,22 @@
 import os
+import pathlib
 import pickle
 import pandas as pd
 from flask import Flask, request, jsonify, flash
 from werkzeug.utils import secure_filename
 from Monthly_Revenue_Forecast import (
-    read_remote_data, preprocess_data, predict_next_month, ALLOWED_EXTENSIONS, allowed_file
+    read_remote_data, preprocess_data, predict_next_month, ALLOWED_EXTENSIONS, allowed_file, create_and_save_arima_model
 )
 
 # Initialize Flask app
 app = Flask(__name__)
 
 # Load the ARIMA model from file
-with open('arima_results.pkl', 'rb') as f:
+arima_results_path = 'arima_results.pkl'
+if not pathlib.Path(arima_results_path).exists():
+    create_and_save_arima_model(ts_data)
+
+with open(arima_results_path, 'rb') as f:
     model = pickle.load(f)
 
 # Remote data URL
