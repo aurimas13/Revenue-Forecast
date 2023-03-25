@@ -3,5 +3,7 @@ old_app.py
 __pycache__
 .jovianrc
 app_old.py
+app_new.py
 app_newer.py
+app_json.py
 Monthly_Revenue_Forecast_old.ipynb
