@@ -1,25 +1,17 @@
 import warnings
 import os
-import pickle
-import pandas as pd
+import logging
 import numpy as np
+import pandas as pd
+import pickle
 from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.tools.sm_exceptions import ValueWarning
-
-# Suppress runtime and value warnings
 os.environ['PYTHONWARNINGS'] = 'ignore::RuntimeWarning'
 warnings.filterwarnings("ignore", category=ValueWarning)
 
-# Allowed file extensions for input data
-ALLOWED_EXTENSIONS = {'xlsx'}
-
-# Function to check if the uploaded file has a valid format
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 # Function to read remote data
 def read_remote_data(url):
-    # Read revenue and weather data from a remote excel file
     revenue_data = pd.read_excel(url, sheet_name='Revenue', parse_dates=['Date'], engine='openpyxl')
     weather_data = pd.read_excel(url, sheet_name='Weather', parse_dates=['dt'], engine='openpyxl')
     return revenue_data, weather_data
@@ -32,6 +24,7 @@ def preprocess_data(revenue_data, weather_data):
     # Convert categorical features 'wind' and 'condition' to numerical values
     wind_categories = weather_data['wind'].astype('category').cat.categories
     condition_categories = weather_data['condition'].astype('category').cat.categories
+
     weather_data['wind'] = weather_data['wind'].astype('category').cat.codes
     weather_data['condition'] = weather_data['condition'].astype('category').cat.codes
 
@@ -75,7 +68,6 @@ def preprocess_data(revenue_data, weather_data):
 
     return merged_data
 
-# Predict the next month's revenue
 def predict_next_month(model, preprocessed_data):
     # Split the data into train and test sets
     train_data = preprocessed_data[preprocessed_data['Date'] < '2022-01-01']
@@ -94,9 +86,7 @@ def predict_next_month(model, preprocessed_data):
 
     return prediction
 
-# Create and save the ARIMA model
 def create_and_save_arima_model(ts_data, p=2, d=1, q=5):
-    # Create and fit the ARIMA model
     arima_model = ARIMA(ts_data, order=(p, d, q))
     arima_results = arima_model.fit()
 
@@ -111,10 +101,8 @@ if __name__ == "__main__":
     # Read the remote data using the read_remote_data function
     revenue_data, weather_data = read_remote_data(url)
 
-    # Preprocess the revenue and weather data
     preprocessed_data = preprocess_data(revenue_data, weather_data)
 
-    # Split the preprocessed data into training and testing sets
     train_data = preprocessed_data[preprocessed_data['Date'] < '2022-01-01']
     ts_data = train_data[['Date', 'Revenue']]
     ts_data.set_index('Date', inplace=True)
