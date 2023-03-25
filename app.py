@@ -15,14 +15,35 @@ weather_data = pd.read_excel(url, sheet_name='Weather', parse_dates=['dt'], engi
 
 @app.route('/forecast', methods=['GET', 'POST'])
 def forecast():
-    # Preprocess the data
-    preprocessed_data = preprocess_data(revenue_data, weather_data)
+    if request.method == 'GET':
+        # Preprocess the data
+        preprocessed_data = preprocess_data(revenue_data, weather_data)
 
-    # Make a prediction
-    prediction = predict_next_month(model, preprocessed_data)
+        # Make a prediction
+        prediction = predict_next_month(model, preprocessed_data)
 
-    # Return the prediction as JSON
-    return jsonify({'prediction': prediction})
+        # Return the prediction as JSON
+        return jsonify({'prediction': prediction})
+    
+    elif request.method == 'POST':
+        input_data = request.get_json()
+
+        # Convert input_data to pandas dataframes
+        revenue_input = pd.DataFrame(input_data['revenue_data'])
+        weather_input = pd.DataFrame(input_data['weather_data'])
+
+        # Convert date columns to datetime format
+        revenue_input['Date'] = pd.to_datetime(revenue_input['Date'])
+        weather_input['dt'] = pd.to_datetime(weather_input['dt'])
+
+        # Preprocess the data
+        preprocessed_data = preprocess_data(revenue_data.append(revenue_input), weather_data.append(weather_input))
+
+        # Make a prediction
+        prediction = predict_next_month(model, preprocessed_data)
+
+        # Return the prediction as JSON
+        return jsonify({'prediction': prediction})
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
