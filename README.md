@@ -54,6 +54,7 @@ To get started, follow the Installation and Usage sections in the documentation.
 - [Results](#results)
 - [Docker](#docker)
 - [Contributing](#contributing)
+- [To Do](#to-do)
 - [License](#license)
 
 # Getting Started
@@ -122,8 +123,10 @@ flask run
 
 ***GET request***
 
-To get the predicted revenue for the next month using the cached data, send a GET request to the `/forecast` endpoint:
-```curl -X GET http://localhost:5000/forecast```
+To get the predicted revenue for the next month using the cached data, send a GET request to the `/forecast` endpoint<sup>1</sup>:
+```
+curl -X GET http://localhost:5000/forecast
+```
 The API will return a JSON object containing the predicted revenue:
 
 ```
@@ -134,7 +137,7 @@ The API will return a JSON object containing the predicted revenue:
 
 ***POST request***
 
-To get the predicted revenue for the next month after uploading new excel data, send a POST request to the /`forecast` endpoint with the file as form-data:
+To get the predicted revenue for the next month after uploading new excel data, send a POST request to the /`forecast` endpoint with the file as form-data<sup>2</sup>:
 
 ```
 curl -X POST -H "Content-Type: multipart/form-data" -F "file=@November_data.xlsx" http://localhost:5000/forecast
@@ -147,6 +150,8 @@ The API will return a JSON object containing the predicted revenue:
   "prediction": 249284462.98393857
 }
 ```
+<sup>1</sup> GET  - slower
+<sup>2</sup> POST - faster
 
 # Project Structure
 
@@ -186,6 +191,14 @@ Make sure to replace the example values in the documentation with the actual val
 
 Contributions are welcome! Please submit a pull request or create an issue to discuss any changes or improvements you would like to make.
 
-## License
+# To Do
+
+- Make the GET response faster by creating another endpoint. 
+- Implement Frontend.
+- Creat several more endponts like `/` that explains what needs to be done.
+- Optimize Prophet model for multivariate analysis. 
+- Create API for daily revenue forecast.
+
+# License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/aurimas13/Revenue-Forecast/blob/main/LICENSE) file for details.
