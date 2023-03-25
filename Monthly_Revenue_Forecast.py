@@ -1,9 +1,14 @@
 import warnings
+import os
 import logging
 import numpy as np
 import pandas as pd
 import pickle
 from statsmodels.tsa.arima.model import ARIMA
+from statsmodels.tools.sm_exceptions import ValueWarning
+os.environ['PYTHONWARNINGS'] = 'ignore::RuntimeWarning'
+warnings.filterwarnings("ignore", category=ValueWarning)
+
 
 # Function to preprocess revenue and weather data
 def preprocess_data(revenue_data, weather_data):
