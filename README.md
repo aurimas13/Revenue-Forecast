@@ -13,6 +13,8 @@
 
 # Overview
 
+### Notebooks
+
 The Revenue Forecast project aimed to predict daily and monthly revenues using time series data and weather features by comparing the performance of three different models: Long Short-Term Memory (LSTM), Prophet, and Autoregressive Integrated Moving Average (ARIMA). The main tasks performed in the notebooks were as follows:
 
 1. **Data Preparation**: The time series data and weather features were loaded, cleaned, and preprocessed. Missing values were imputed, and the data was divided into training and testing sets.
@@ -30,6 +32,16 @@ The Revenue Forecast project aimed to predict daily and monthly revenues using t
 7. **Comparing Tuned Models**: The performance of the tuned ARIMA and Prophet models or just ARIMA model was compared using the same metrics as before. The comparison enabled the identification of the best model for predicting revenue in this specific case.
 
 Based on the comparison of accuracy metrics, the ARIMA model was found to be the best choice for this particular dataset and problem, despite its limitations in handling multivariate data. This analysis demonstrated the importance of exploring multiple models and metrics when making predictions and highlights the need for model selection to be tailored to the specific dataset and problem at hand.
+
+### API
+
+The Revenue Forecast project also provides an API to forecast monthly revenue for a business using historical revenue and weather data. The API uses a time series forecasting method, specifically the ARIMA model from analysis of notebooks, to predict the revenue for the next month. The data is preprocessed, and features like wind and weather conditions are converted into numerical values. The ARIMA model is trained on the preprocessed data, and the prediction is provided as a JSON object when requested.
+
+The Flask app serves as the API for the project, allowing users to either GET or POST requests to the `/forecast` endpoint. When a GET request is made, the API returns the predicted revenue for the next month using the cached data. A POST request allows users to upload new data, which is then used to update the cached data and make a prediction based on the updated dataset.
+
+The 2nd part of the project is designed to be easy to use and integrate into various applications where monthly revenue forecasts are required. The API can be extended to include additional features and models to improve the accuracy and usefulness of the predictions.
+
+To get started, follow the Installation and Usage sections in the documentation.
 
 # Table of Contents
 
