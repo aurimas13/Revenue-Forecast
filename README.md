@@ -59,47 +59,65 @@ To get started, follow the Installation and Usage sections in the documentation.
 # Getting Started
 
 Follow these instructions to set up the project on your local machine for development and testing purposes.
+
 ## Requirements
 
-To run the porject Python 3.7+ is needswhile libraries required are at [requirments](https://github.com/aurimas13/Revenue-Forecast/blob/main/requirements.txt) file. 
+To run the porject Python 3.7+ is needswhile libraries required are at [requirments](https://github.com/aurimas13/Revenue-Forecast/blob/main/requirements.txt) file.
 
 # Installation
 
 To set up a virtual environment and install the required packages, follow these steps:
 
 1. Clone the repository:
+
 ```
 git clone https://github.com/aurimas13/Revenue-Forecast.git
 ```
+
 2. Change the working directory:
+
 ```
 cd Revenue-Forecast
 ```
+
 3. Create a virtual environment:
+
 ```
 python -m venv venv
 ```
+
 4. Activate the virtual environment:
-  - On Windows:
+
+- On Windows:
+
 ```
 venv\Scripts\activate
 ```
-  - On macOS and Linux:
+
+- On macOS and Linux:
+
 ```
 source venv/bin/activate
 ```
+
 5. Install the required packages:
+
 ```
 pip install -r requirements.txt
 ```
+
 6. Run the Monthly_Revenue_Forecast.py script to create and save the ARIMA model:
+
 ```
 python Monthly_Revenue_Forecast.py
 ```
+
 7. Start the Flask development server:
+
 ```
 flask run
 ```
+
 # Usage
 
 ***GET request***
@@ -107,6 +125,7 @@ flask run
 To get the predicted revenue for the next month using the cached data, send a GET request to the `/forecast` endpoint:
 ```curl -X GET http://localhost:5000/forecast```
 The API will return a JSON object containing the predicted revenue:
+
 ```
 {
   "prediction": 231099270.4612668
@@ -116,10 +135,13 @@ The API will return a JSON object containing the predicted revenue:
 ***POST request***
 
 To get the predicted revenue for the next month after uploading new excel data, send a POST request to the /`forecast` endpoint with the file as form-data:
+
 ```
 curl -X POST -H "Content-Type: multipart/form-data" -F "file=@November_data.xlsx" http://localhost:5000/forecast
 ```
+
 The API will return a JSON object containing the predicted revenue:
+
 ```
 {
   "prediction": 249284462.98393857
@@ -137,10 +159,21 @@ The project is organized as follows:
 
 # Docker
 
-To build & run docker do these commands: 
-`docker build -t monthly-revenue-prediction .` & `docker run -p 5000:5000 monthly-revenue-prediction`
+## Prerequisites
 
-To run the app then go and follow what is said at [Installation](#installation).
+- Docker installed on your system. Follow the [official Docker documentation](https://docs.docker.com/engine/install/) for installation instructions.
+
+**Steps**
+
+1. Open a terminal and navigate to the project directory where the Dockerfile is located.
+2. Build the Docker image by running the following command in the terminal:
+```docker build -t monthly-revenue-prediction .```
+& `docker run -p 5000:5000 monthly-revenue-prediction`
+3. Once the image is built, run a container using the following command:
+```docker run -p 5000:5000 --name revenue-forecast-container revenue-forecast```
+4. The Flask app should now be running on your local machine at <http://localhost:5000>. You can access the /forecast endpoint by sending a GET or POST request using the instructions provided in the project documentation.
+
+To run the app then go and follow what is said at [Installation](#installation) and [Usage](#usage).
 
 # Results
 
@@ -157,7 +190,3 @@ Contributions are welcome! Please submit a pull request or create an issue to di
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/aurimas13/Revenue-Forecast/blob/main/LICENSE) file for details.
-
-
-
-
