@@ -105,26 +105,29 @@ flask run
 ```
 # Usage
 
-To get the predicted revenue for the next month, send a request to the `/forecast` endpoint:
+***GET request***
+
+To get the predicted revenue for the next month using the cached data, send a GET request to the `/forecast` endpoint:
 ```curl -X GET http://localhost:5000/forecast```
 The API will return a JSON object containing the predicted revenue:
 ```
 {
-  "prediction": 1234567.89
+  "prediction": 231099270.4612668
 }
 ```
-You can also send a POST request to the /forecast endpoint with the same result:
+
+***POST request***
+
+To get the predicted revenue for the next month after uploading new excel data, send a POST request to the /`forecast` endpoint with the file as form-data:
 ```
-curl -X POST http://localhost:5000/forecast
+curl -X POST -H "Content-Type: multipart/form-data" -F "file=@November_data.xlsx" http://localhost:5000/forecast
 ```
-<!-- 1. TO BE DONE IF ASKED - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOKS: Add your historical revenue and weather or just revenue data to a CSV file with columns Date and Revenue for Daily or Monthly Forecast.
-2. TO BE DONE IF ASKED - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOKS: Update the file path in the code to point to your CSV file.
-3. TO BE DONE IF ASKED - CURRENTLY THE PROJECT ONLY CONTAINS NOTEBOOKS: Run the main script:
+The API will return a JSON object containing the predicted revenue:
 ```
-python main.py
+{
+  "prediction": 249284462.98393857
+}
 ```
-4. The script will preprocess the data, train the ARIMA, LSTM, and Prophet models, and evaluate their performance.
-5. The results will be displayed, including visualizations of the model predictions and a comparison of their performance metrics. -->
 
 # Project Structure
 
@@ -132,8 +135,8 @@ The project is organized as follows:
 
 - `app.py`: The main Flask API file that initializes the ARIMA model and sets up the /forecast endpoint.
 - `Monthly_Revenue_Forecast.py`: This module contains functions for preprocessing the data, making predictions using the ARIMA model, and creating and saving the ARIMA model.
-`arima_results.pkl`: The saved ARIMA model.
-`requirements.txt`: The list of required packages for the project.
+- `arima_results.pkl`: The saved ARIMA model.
+- `requirements.txt`: The list of required packages for the project.
 
 # Docker
 
@@ -145,6 +148,10 @@ To run the app then go and follow what is said at [Installation](#installation).
 # Results
 
 The repository includes a comparison of the ARIMA, LSTM, and Prophet models' performance in terms of MSE, MAE, MAPE, and RMSE. The comparison in the Jupyter notebooks will help you decide which model is best suited for your revenue forecasting needs. Default chosen is ARIMA model for both Daily and Monthly reevenue forecasts.
+
+The prediction results may vary depending on the data used for training and forecasting. The example values provided for GET and POST requests are based on the provided data, and you may see different results when using your own data.
+
+Make sure to replace the example values in the documentation with the actual values when using your data.
 
 # Contributing
 
