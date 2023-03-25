@@ -13,8 +13,6 @@
 
 # Overview
 
-# **Overview** </b>
-
 The Revenue Forecast project aimed to predict daily and monthly revenues using time series data and weather features by comparing the performance of three different models: Long Short-Term Memory (LSTM), Prophet, and Autoregressive Integrated Moving Average (ARIMA). The main tasks performed in the notebooks were as follows:
 
 1. **Data Preparation**: The time series data and weather features were loaded, cleaned, and preprocessed. Missing values were imputed, and the data was divided into training and testing sets.
