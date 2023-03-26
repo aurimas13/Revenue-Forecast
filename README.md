@@ -124,9 +124,11 @@ flask run
 ***GET request***
 
 To get the predicted revenue for the next month using the cached data, send a GET request to the `/forecast` endpoint<sup>1</sup>:
+
 ```
 curl -X GET http://localhost:5000/forecast
 ```
+
 The API will return a JSON object containing the predicted revenue:
 
 ```
@@ -150,6 +152,7 @@ The API will return a JSON object containing the predicted revenue:
   "prediction": 249284462.98393857
 }
 ```
+
 <sup>1</sup> GET  - slower
 <sup>2</sup> POST - faster
 
@@ -172,13 +175,17 @@ The project is organized as follows:
 
 1. Open a terminal and navigate to the project directory where the Dockerfile is located.
 2. Build the Docker image by running the following command in the terminal:
+
 ```
 docker build -t revenue-forecast .
 ```
+
 3. Once the image is built, run a container using the following command:
+
 ```
 docker run -p 5000:5000 --name revenue-forecast-container revenue-forecast
 ```
+
 4. The Flask app should now be running on your local machine at <http://localhost:5000>. You can access the /forecast endpoint by sending a GET or POST request using the instructions provided in the project documentation.
 
 To run the app then go and follow what is said at [Installation](#installation) and [Usage](#usage).
@@ -197,13 +204,12 @@ Contributions are welcome! Please submit a pull request or create an issue to di
 
 # To Do
 
-- Make the GET response faster by creating another endpoint. 
+- Make the GET response faster by creating another endpoint.
 - Implement Frontend.
 - Creat several more endponts like `/` that explains what needs to be done.
-- Optimize Prophet model for multivariate analysis. 
+- Optimize Prophet model for multivariate analysis.
 - Create API for daily revenue forecast.
 
 # License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/aurimas13/Revenue-Forecast/blob/main/LICENSE) file for details.
-
