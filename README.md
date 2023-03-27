@@ -107,10 +107,10 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-6. Run the Monthly_Revenue_Forecast.py script to create and save the ARIMA model:
+6. Run the monthly_revenue_forecast.py script to create and save the ARIMA model:
 
 ```
-python Monthly_Revenue_Forecast.py
+python monthly_revenue_forecast.py
 ```
 
 7. Start the Flask development server:
