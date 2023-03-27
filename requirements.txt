@@ -1,14 +1,12 @@
-pandas==1.3.4
-numpy
-seaborn
-scikit-learn
-statsmodels
-matplotlib
-werkzeug
-pathlib
-prophet
-pmdarima
-jupyter
-flask
-openpyxl
+pandas==1.3.5
+numpy==1.23.5
+seaborn==0.11.2
+scikit-learn==0.23.2
+statsmodels==0.13.2
+matplotlib==3.5.1
+werkzeug==2.2.2
+prophet==1.1.2
+pmdarima==2.0.3
+flask==2.2.2
+openpyxl==3.0.10
 # torch
