@@ -142,7 +142,7 @@ The API will return a JSON object containing the predicted revenue:
 To get the predicted revenue for the next month after uploading new excel data, send a POST request to the /`forecast` endpoint with the file as form-data<sup>2</sup>:
 
 ```
-curl -X POST -H "Content-Type: multipart/form-data" -F "file=@November_data.xlsx" http://localhost:5000/forecast
+curl -X POST -H "Content-Type: multipart/form-data" -F "file=@/absolute/path/to/November_data.xlsx" http://localhost:5000/forecast
 ```
 
 The API will return a JSON object containing the predicted revenue:
