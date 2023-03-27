@@ -133,7 +133,7 @@ The API will return a JSON object containing the predicted revenue:
 
 ```
 {
-  "prediction": 231099270.4612668
+  "prediction": 231099270
 }
 ```
 
@@ -149,7 +149,7 @@ The API will return a JSON object containing the predicted revenue:
 
 ```
 {
-  "prediction": 249284462.98393857
+  "prediction": 249284462
 }
 ```
 
