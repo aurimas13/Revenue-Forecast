@@ -14,7 +14,7 @@ app = Flask(__name__)
 # Load the ARIMA model from file
 arima_results_path = 'arima_results.pkl'
 if not pathlib.Path(arima_results_path).exists():
-    create_and_save_arima_model(ts_data)
+    raise Exception("Please create your arima_results.pkl model by running python monthly_revenue_forecast.py first.")
 
 with open(arima_results_path, 'rb') as f:
     model = pickle.load(f)
