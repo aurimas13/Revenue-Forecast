@@ -6,6 +6,7 @@ import numpy as np
 from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.tools.sm_exceptions import ValueWarning
 
+
 # Suppress runtime and value warnings
 os.environ['PYTHONWARNINGS'] = 'ignore::RuntimeWarning'
 warnings.filterwarnings("ignore", category=ValueWarning)
@@ -13,19 +14,27 @@ warnings.filterwarnings("ignore", category=ValueWarning)
 # Allowed file extensions for input data
 ALLOWED_EXTENSIONS = {'xlsx'}
 
-# Function to check if the uploaded file has a valid format
+
 def allowed_file(filename):
+    """
+    Function to check if the uploaded file has a valid format
+    """
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-# Function to read remote data
+
 def read_remote_data(url):
-    # Read revenue and weather data from a remote excel file
+    """
+    Read revenue and weather data from a remote excel file
+    """
     revenue_data = pd.read_excel(url, sheet_name='Revenue', parse_dates=['Date'], engine='openpyxl')
     weather_data = pd.read_excel(url, sheet_name='Weather', parse_dates=['dt'], engine='openpyxl')
     return revenue_data, weather_data
 
-# Function to preprocess revenue and weather data
+
 def preprocess_data(revenue_data, weather_data):
+    """
+    Function to preprocess revenue and weather data
+    """
     # Drop the 'time' column from the weather_data
     weather_data = weather_data.drop('time', axis=1)
 
@@ -75,8 +84,11 @@ def preprocess_data(revenue_data, weather_data):
 
     return merged_data
 
-# Predict the next month's revenue
+
 def predict_next_month(model, preprocessed_data):
+    """
+    Predict the next month's revenue
+    """
     # Split the data into train and test sets
     train_data = preprocessed_data[preprocessed_data['Date'] < '2022-01-01']
     test_data = preprocessed_data[preprocessed_data['Date'] >= '2022-01-01']
@@ -94,8 +106,11 @@ def predict_next_month(model, preprocessed_data):
 
     return prediction
 
-# Create and save the ARIMA model
+
 def create_and_save_arima_model(ts_data, p=2, d=1, q=5):
+    """
+    Create and save the ARIMA model
+    """
     # Create and fit the ARIMA model
     arima_model = ARIMA(ts_data, order=(p, d, q))
     arima_results = arima_model.fit()
