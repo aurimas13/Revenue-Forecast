@@ -4,7 +4,7 @@ import pickle
 import pandas as pd
 from flask import Flask, request, jsonify, flash
 from werkzeug.utils import secure_filename
-from Monthly_Revenue_Forecast import (
+from monthly_revenue_forecast import (
     read_remote_data, preprocess_data, predict_next_month, ALLOWED_EXTENSIONS, allowed_file, create_and_save_arima_model
 )
 
