@@ -73,7 +73,7 @@ def forecast():
     prediction = predict_next_month(model, preprocessed_data)
 
     # Return the prediction as JSON
-    return jsonify({'prediction': prediction})
+    return jsonify({'prediction': int(prediction)})
 
 # Start the Flask app
 if __name__ == '__main__':
