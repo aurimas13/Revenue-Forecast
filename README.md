@@ -173,7 +173,7 @@ The project is organized as follows:
 
 **Steps**
 
-1. Open a terminal and navigate to the project directory where the Dockerfile is located.
+1. Open a terminal and navigate to the project directory after cloning the github repo where the Dockerfile is located.
 2. Build the Docker image by running the following command in the terminal:
 
 ```
