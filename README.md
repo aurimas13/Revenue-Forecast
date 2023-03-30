@@ -173,7 +173,7 @@ The project is organized as follows:
 
 **Steps**
 
-1. Open a terminal and navigate to the project directory where Dockerfile is after cloning the repo from [Installation](#installation) 1<sup>st</sup> step.
+1. Open a terminal and navigate to the project directory where Dockerfile is after following the 1<sup>st</sup> step. from [Installation](#installation).
 2. Build the Docker image by running the following command in the terminal:
 
 ```
