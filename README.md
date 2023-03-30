@@ -173,7 +173,7 @@ The project is organized as follows:
 
 **Steps**
 
-1. Open a terminal and navigate to the project directory after cloning the github repo where the Dockerfile is located.
+1. Open a terminal and navigate to the project directory where Dockerfile is after cloning the repo from [Installation](#installation) 1<sup>st</sup> step.
 2. Build the Docker image by running the following command in the terminal:
 
 ```
@@ -188,7 +188,7 @@ docker run -p 5000:5000 --name revenue-forecast-container revenue-forecast
 
 4. The Flask app should now be running on your local machine at <http://localhost:5000>. You can access the /forecast endpoint by sending a GET or POST request using the instructions provided in the project documentation.
 
-To run the app then go and follow what is said at [Installation](#installation) and [Usage](#usage).
+To run the app then go and follow what is said at [Usage](#usage).
 
 # Results
 
