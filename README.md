@@ -31,7 +31,7 @@ The Revenue Forecast project aimed to predict daily and monthly revenues using t
 
 7. **Comparing Tuned Models**: The performance of the tuned ARIMA and Prophet models or just ARIMA model was compared using the same metrics as before. The comparison enabled the identification of the best model for predicting revenue in this specific case.
 
-Based on the comparison of accuracy metrics, the ARIMA model was found to be the best choice for this particular dataset and problem, despite its limitations in handling multivariate data. This analysis demonstrated the importance of exploring multiple models and metrics when making predictions and highlights the need for model selection to be tailored to the specific dataset and problem at hand.
+Based on the comparison of accuracy metrics, the LSTM model was found to be the best choice for this particular dataset. This analysis demonstrated the importance of exploring multiple models and metrics when making predictions and highlights the need for model selection to be tailored to the specific dataset and problem at hand.
 
 ### API
 
@@ -192,7 +192,7 @@ To run the app then go and follow what is said at [Usage](#usage).
 
 # Results
 
-The repository includes a comparison of the ARIMA, LSTM, and Prophet models' performance in terms of MSE, MAE, MAPE, and RMSE. The comparison in the Jupyter notebooks will help you decide which model is best suited for your revenue forecasting needs. Default chosen is ARIMA model for both Daily and Monthly reevenue forecasts.
+The repository includes a comparison of the ARIMA, LSTM, and Prophet models' performance in terms of MSE, MAE, MAPE, and RMSE. The comparison in the Jupyter notebooks will help you decide which model is best suited for your revenue forecasting needs. Default chosen is LSTM model for Daily and ARIMA for Monthly revenue forecasts.
 
 The prediction results may vary depending on the data used for training and forecasting. The example values provided for GET and POST requests are based on the provided data, and you may see different results when using your own data.
 
@@ -213,6 +213,3 @@ Contributions are welcome! Please submit a pull request or create an issue to di
 # License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/aurimas13/Revenue-Forecast/blob/main/LICENSE) file for details.
-
-
-
