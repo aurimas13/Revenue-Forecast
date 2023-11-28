@@ -8,7 +8,7 @@ from werkzeug.utils import secure_filename
 from monthly_revenue_forecast import (
     read_remote_data, preprocess_data, predict_next_month, ALLOWED_EXTENSIONS, allowed_file, create_and_save_arima_model
 )
-# Loading environemnnt variables
+# Loading environment variables
 load_dotenv()
 
 # Initialize Flask app
